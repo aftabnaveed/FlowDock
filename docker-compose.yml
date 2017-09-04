@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+
+  workspace:
+    build: 
+      context: ./workspace
+      dockerfile: "Dockerfile"
+
+  
+  app:
+    image: phusion/baseimage:latest
+    volumes:
+      - ../disposablemail:/srv/disposablemail
